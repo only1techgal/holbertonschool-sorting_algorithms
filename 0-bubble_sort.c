@@ -29,39 +29,21 @@ bool bubbly = false;
 if (array == NULL || size < 2)
 return;
 
-<<<<<<< HEAD
-for (size_t i = 0; i < size - 1; i++)
-=======
 while (bubbly == false)
 {
 bubbly = true;
 for (i = 0; i < len - 1; i++)
->>>>>>> 10e1c6f (0-bubble_sort.c, 0-O)
 {
-swapped = 0;
 for (size_t j = 0; j < size - 1 - i; j++)
 {
 if (array[j] > array[j + 1])
 {
-<<<<<<< HEAD
-
-temp = array[j];
-array[j] = array[j + 1];
-array[j + 1] = temp;
-
-=======
-swap_ints(array + i, array + i + 1);
->>>>>>> 10e1c6f (0-bubble_sort.c, 0-O)
+swap_ints(&array[j], &array[j + 1]);
 print_array(array, size);
 bubbly = false;
 }
 }
-<<<<<<< HEAD
-
-if (swapped == 0)
-break;
-=======
 len--;
->>>>>>> 10e1c6f (0-bubble_sort.c, 0-O)
+}
 }
 }
