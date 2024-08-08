@@ -16,23 +16,25 @@ int swapped;
 if (array == NULL || size < 2)
 return;
 
-do
-{
-swapped = 0;
 for (size_t i = 0; i < size - 1; i++)
 {
-if (array[i] > array[i + 1])
+swapped = 0;
+for (size_t j = 0; j < size - 1 - i; j++)
+{
+if (array[j] > array[j + 1])
 {
 
-temp = array[i];
-array[i] = array[i + 1];
-array[i + 1] = temp;
-
+temp = array[j];
+array[j] = array[j + 1];
+array[j + 1] = temp;
 
 print_array(array, size);
 
 swapped = 1;
 }
 }
-} while (swapped);
+
+if (swapped == 0)
+break;
+}
 }
